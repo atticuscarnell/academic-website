@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Atticus Carnell</title>
+<meta name="description" content="Atticus Carnell is a PhD candidate in Politics and Political Philosophy at Princeton University, working on the ethics of communication, democratic theory, and the social theory of media." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Atticus Carnell" />
+<meta property="og:description" content="PhD candidate in Politics and Political Philosophy at Princeton, working on the ethics of communication, democratic theory, and the social theory of media." />
+<meta property="og:image" content="https://atticuscarnell.com/headshot.jpg" />
+<meta property="og:url" content="https://atticuscarnell.com/" />
+<meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #444444;
+    --title: #2a1c3a;
+    --title-hover: #5f2d84;
+    --link: #6d2787;
+    --link-hover: #4a1c5c;
+    --rule: #e2e2e2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Spectral", Georgia, serif;
+    color: var(--ink);
+    background: #ffffff;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* ---- Wordmark header ---- */
+  .topbar {
+    max-width: 53rem;
+    margin: 3.4rem auto 0;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+  .topbar .wordmark {
+    font-family: "Spectral", Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--title);
+  }
+  .halfrule-wrap { max-width: 53rem; margin: 0.35rem auto 0; padding: 0 1.5rem; }
+  .halfrule { width: 100%; height: 1px; background: linear-gradient(90deg, #2a1c3a 0%, #2a1c3a 12%, rgba(42,28,58,0) 85%); }
+  .topbar nav { display: flex; gap: 1.3rem; flex-wrap: wrap; }
+  .topbar nav a {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .topbar nav a:hover { color: var(--title); }
+
+  /* ---- Layout ---- */
+  main {
+    max-width: 53rem;
+    margin: 0 auto;
+    padding: 1.95rem 1.5rem 5rem;
+  }
+  .intro {
+    display: flex;
+    gap: 2.1rem;
+    align-items: flex-start;
+    margin: 0 0 3rem;
+  }
+  .intro img {
+    width: 200px;
+    flex: 0 0 200px;
+    height: auto;
+    border-radius: 0;
+  }
+  .intro p {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  @media (max-width: 34rem) {
+    .intro { flex-direction: column; }
+    .intro img { width: 55%; flex-basis: auto; }
+  }
+  section { margin-bottom: 3rem; }
+  .lead {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    margin: 0 0 1.4rem;
+  }
+  h2 {
+    font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1.08rem;
+    margin: 0 0 0.55rem;
+    color: var(--ink);
+  }
+
+  details { padding: 0.3rem 0; }
+  h2 + details { padding-top: 0; }
+  details summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: var(--title);
+    transition: color 0.15s;
+  }
+  details summary:hover { color: var(--title-hover); }
+  details summary::-webkit-details-marker { display: none; }
+  .fixed-summary { cursor: default; }
+  .fixed-summary:hover { color: var(--title); }
+  .venue { font-style: normal; font-weight: 400; font-size: 0.98rem; }
+  .abstract { margin: 0.75rem 0 0.5rem 0; color: var(--ink-soft); font-size: 1.02rem; }
+  .paper-links { margin: 0.4rem 0 0.4rem 0; display: flex; gap: 1.25rem; font-size: 0.95rem; }
+  .paper-links a { color: var(--title); text-decoration: none; border-bottom: 1px solid #b8afc2; padding-bottom: 1px; }
+  .paper-links a:hover { color: var(--title-hover); border-color: var(--title-hover); }
+  .draft-note { margin: 0.4rem 0 0.4rem 0; font-size: 0.95rem; font-style: italic; color: var(--ink-soft); }
+  .jump { color: var(--title); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; cursor: pointer; }
+  .jump:hover { color: var(--title-hover); }
+  .bio-link { color: var(--title); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .bio-link:hover { color: var(--title-hover); }
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="wordmark">Atticus Carnell</span>
+  </header>
+  <div class="halfrule-wrap"><div class="halfrule"></div></div>
+
+  <main>
+    <div class="intro">
+      <img src="headshot.jpg" alt="Atticus Carnell" />
+      <p>
+        I am a PhD candidate in Politics and the Program in Political Philosophy at Princeton
+        University, where I hold a Harold W. Dodds Fellowship this academic year. I received my
+        BA in Government &amp; Legal Studies from Bowdoin College in 2018 and my MPhil in Political
+        Theory from Oxford in 2020. I work on the ethics of
+        communication, democratic theory, and the social theory of media.
+        You can find my CV
+        <a class="bio-link" href="carnell-cv.pdf">here</a> and email me
+        <a id="email" class="bio-link" href="#">here</a>.
+      </p>
+    </div>
+
+    <section id="research">
+      <h2>Research</h2>
+      <p class="lead">
+        My current research aims to develop the conceptual tools required to better understand, critically
+        evaluate, and improve democracy&rsquo;s life online. To this end it focuses on two sets of pressing
+        questions. <a class="jump" data-target="research-dissertation">One</a> is normative: What do
+        we owe each other in communicating, and, relatedly, why is communication so important in
+        relations of mutual respect? <a class="jump" data-target="research-digital">The
+        other</a> is descriptive and diagnostic: How should we expect digital media to change our communicative
+        practices, particularly given how these have historically been theorized?
+      </p>
+
+      <details id="research-dissertation" hidden>
+        <summary class="fixed-summary"><em>The Morality of Voice</em></summary>
+        <p class="abstract">Log onto the platform formerly known as Twitter and you&rsquo;re likely to experience <em>disrespect</em>. But what, really, does that mean?</p>
+        <p class="abstract">Of the moral ideas of modernity, respect has been among the most enduring. Most agree that respect protects persons in their exercise of characteristically human capacities, but different environments engage different human capacities in different ways. If so, respect may manifest somewhat differently in digitally mediated interaction than it does in interaction in a physical environment&mdash;where it is closely connected to <em>freedom</em>.</p>
+        <p class="abstract">My dissertation develops a theory of communicative respect&mdash;an account of when, why, and how respecting others requires granting them a <em>voice</em> in our deliberation. This is one of the great moral controversies of our time, but attempts to resolve it have suffered a notorious deficiency of concepts. Consider that we often owe others more than just <em>listening to</em> their perspectives, but rarely outright <em>deference</em>. To fill this gap, I introduce and develop a conception of <em>heed</em>. Unlike deferring, heeding another does not require simply accepting what or doing as they say; unlike merely listening, it requires being moved by their speech. Because heeding is rationally active where deference is passive, mutually heedful relations threaten autonomy less than relations of deference.</p>
+        <p class="abstract">The second half of my dissertation deploys the conceptual tools described above to argue that others&rsquo; claims to a voice are <em>sensitive to their stakes</em> in our deliberation. This yields an empowering conception, on which we owe those vulnerable to our choices heed, but others typically less. The final chapter then considers the proper role of media in fostering respect (and other moral attitudes) among citizens.</p>
+      </details>
+
+      <details id="research-digital" hidden>
+        <summary class="fixed-summary">The Social Consequences of Mediation</summary>
+        <p class="abstract">Another major project addresses the second question. It aims to update influential models of (especially normative) communication on which political theorists often rely in light of new patterns of mediation. An initial article from this project, &ldquo;Reconstructing the Web: Towards a Diagnosis of the Moral Pathologies of Platforms,&rdquo; was recently published at <em>European Journal of Political Theory</em>, and I am working on another (&ldquo;Parasocial Recognition&rdquo;) on the consequences of digitization for our practices of recognition.</p>
+      </details>
+    </section>
+
+    <section id="articles">
+      <h2>Articles</h2>
+      <details>
+        <summary>Taking Heed: Between Consideration and Deference <span class="venue">&mdash; <em>Political Philosophy</em> (2026)</span></summary>
+        <p class="abstract">Some theorists maintain that democracy is a condition in which citizens have authority over matters of common concern. But just what kind of authority citizens have proves difficult to describe. Understood strongly&mdash;say, as a claim to deference&mdash;this authority is obviously overly demanding. But understood more weakly, as a claim to consideration, it is not demanding enough. Thus I identify a dilemma for such conceptions of democracy. My diagnosis is that theoretical tools inherited from Raz, especially the idea of a preemptive reason, frustrate attempts to toe the line between over- and under-demandingness. To remedy this, I identify and develop a novel authority concept&mdash;<em>heed</em>&mdash;and theoretical tools to capture it: a <em>resistant</em> reason rather than a preemptive one.</p>
+        <p class="paper-links"><a href="carnell-taking-heed.pdf">PDF draft</a><a href="https://politicalphilosophyjournal.org/article/id/25630/">Publication page</a></p>
+      </details>
+      <details>
+        <summary>Reconstructing the Web: Towards a Diagnosis of the Moral Pathologies of Platforms <span class="venue">&mdash; <em>European Journal of Political Theory</em> (2025)</span></summary>
+        <p class="abstract">Influential reconstructions of moral communication rarely take new forms of technological mediation into account. This paper does so, considering how the practical pressures that shape moral communication on social media differ from those that often shape it offline in order to develop a set of novel theoretical explanations of the moral pathologies of social media. First, because moral communication on social media is often at considerable remove from <em>action situations</em> and <em>concrete communities</em>&mdash;and so from the need to coordinate successfully and maintain healthy relationships&mdash;it selects for moral communication that is more critical than coordinative, and criticism that is untempered. Second, because social media facilitates witnessing wrongs more than it does wronging, it selects for expressions of indignation, but also frustrates the conversational practices by which we work through the reactive attitudes. We should anticipate all this to have important consequences for moral language, understanding, and socialization.</p>
+        <p class="paper-links"><a href="carnell-reconstructing-the-web.pdf">PDF draft</a><a href="https://journals.sagepub.com/doi/10.1177/14748851251385538">Publication page</a></p>
+      </details>
+    </section>
+
+    <section id="chapters">
+      <h2>Book Chapters</h2>
+      <details>
+        <summary>Reconnaissance et Critique &agrave; l&rsquo;Anthropoc&egrave;ne <span class="venue">&mdash; in <em>Croisements Critiques: Actualit&eacute; de l&rsquo;&Eacute;cole de Francfort</em>, eds. Genel and Plaetzer (2022)</span></summary>
+        <p class="abstract">One important task of the critical theorist is to identify the normative foundations of immanent critique. I argue here that Axel Honneth&rsquo;s influential account thereof&mdash;his theory of recognition&mdash;provides foundations only for criticism of how social actors relate to each other (&ldquo;intrasocial&rdquo; criticism), but not of how human society relates to the rest of nature (&ldquo;extrasocial&rdquo; criticism). For this reason it can explain neither why humanity&rsquo;s domination of non-human nature is objectionable, nor social struggles the world over on nature&rsquo;s behalf. But a critical theory for the Anthropocene must do both. To conclude I consider some ways forward.</p>
+        <p class="paper-links"><a href="carnell-recognition-and-criticism.pdf">PDF draft (English)</a><a href="https://www.editionsbdl.com/produit/croisements-critiques-lactualite-de-lecole-de-francfort/">Publication page</a></p>
+        <p class="draft-note">French translation available upon request</p>
+      </details>
+    </section>
+
+    <section id="papers">
+      <h2>Selected Working Papers &amp; Works in Progress</h2>
+      <details>
+        <summary>[title redacted for peer review]</summary>
+        <p class="abstract">[about why respecting others requires granting them a voice]</p>
+        <p class="draft-note">Draft available upon request</p>
+      </details>
+      <details>
+        <summary>What Is Popular Sovereignty? [APSA presentation 9/5/26]</summary>
+        <p class="abstract">Many &ldquo;realists&rdquo; in democratic theory argue that, given the shortcomings of most citizens, democracy will fail to realize popular sovereignty in practice. In defining popular sovereignty they typically follow Robert Dahl, who characterized it as follows: &ldquo;whenever policy choices are perceived to exist, the alternative selected and enforced as governmental policy is the alternative most preferred by the members&rdquo; of the relevant polity. I argue here that this definition of popular sovereignty, at least as the realists deploy it, is confused. Then I consider what follows for the realist.</p>
+        <p class="draft-note">Draft available upon request</p>
+      </details>
+      <details>
+        <summary>Expressing Respect and Reasoning Publicly</summary>
+        <p class="abstract">[argues that rightful action is often expressively ambiguous and considers what follows institutionally]</p>
+      </details>
+      <details>
+        <summary>Parasocial Recognition</summary>
+        <p class="abstract">[about how digital mediation changes our practices of recognition and the social consequences of these changes]</p>
+      </details>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var user = 'atticuscarnell', domain = 'gmail.com';
+      var a = document.getElementById('email');
+      if (a) { a.href = 'mailto:' + user + '@' + domain; }
+    })();
+    document.querySelectorAll('.jump').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var t = document.getElementById(el.dataset.target);
+        if (!t) return;
+        if (t.hasAttribute('hidden')) {
+          t.removeAttribute('hidden');
+          t.open = true;
+          t.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          t.open = false;
+          t.setAttribute('hidden', '');
+        }
+      });
+    });
+    document.querySelectorAll('.fixed-summary').forEach(function (s) {
+      s.addEventListener('click', function (e) { e.preventDefault(); });
+    });
+  </script>
+
+</body>
+</html>
